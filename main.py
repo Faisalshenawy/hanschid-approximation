@@ -8,7 +8,7 @@ st.image("your_image.png", use_column_width=True)
 st.write("Enter the following cell parameters:")
 
 # Select box for organ
-organs = ["Left Kidney", "Right Kidney", "Liver"]
+organs = ["Left Kidney", "Right Kidney", "Liver","Lesion"]
 selected_organ = st.selectbox("Select Organ", organs)
 
 total_count = st.number_input("Total Count")
@@ -26,8 +26,8 @@ if st.button("Calculate Dose"):
     # Display the result
     st.write(f"Dose (Gy) = {dose:.2f} Gy")
 
-# Reference text
-st.markdown("Reference: Insert your reference text here.")
+    # Display the selected organ after the calculation
+    st.write(f"Selected Organ: {selected_organ}")
 
 
 
