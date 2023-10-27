@@ -23,11 +23,9 @@ if st.button("Calculate Dose"):
     # Perform the calculation based on the entered values
     dose = 0.25 * (total_count * time_point_hours) / (time_per_projection * num_images * volume * calibration_factor)
 
-    # Display the result
-    st.write(f"Dose (Gy) = {dose:.2f} Gy")
-
-    # Display the selected organ after the calculation
+ # Display the absorbed dose with the selected organ
     st.write(f"Selected Organ: {selected_organ}")
+    st.write(f"Absorbed Dose (Gy) = {dose:.2f} Gy")
 
 
 
