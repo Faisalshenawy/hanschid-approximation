@@ -12,8 +12,7 @@ organs = ["Left Kidney", "Right Kidney", "Liver","Lesion"]
 selected_organ = st.selectbox("Select Organ", organs)
 
 total_count = st.number_input("Total Count")
-st.header("**Time Point in Hours:** "time point in hours" represents the duration elapsed after the administration of a radiopharmaceutical when imaging ")
-time_point_hours = st.number_input("Time Point in Hours")
+time_point_hours = st.number_input("Time Point in Hours represents the duration elapsed after the administration of a radiopharmaceutical when imaging")
 time_per_projection = st.number_input("Time per Projection (seconds)")
 num_images = st.number_input("Number of Images")
 volume = st.number_input("Volume (ml)")
