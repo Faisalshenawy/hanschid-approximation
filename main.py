@@ -1,12 +1,16 @@
 import streamlit as st
 
-st.title("Simplified Dosimetry For Peptide Receptor Radionuclide Therapy (PRRT) Using 177Lu-DOTATATE/DOTATOC ")
+# Title and Image
+st.title("Dose Calculation Web App")
+st.image("your_image.png", use_column_width=True)
 
-
-st.image("equation1.png", use_column_width=True)
-
-# Create input fields for cell parameters on the main page
+# Create input fields for cell parameters
 st.write("Enter the following cell parameters:")
+
+# Select box for organ
+organs = ["Left Kidney", "Right Kidney", "Liver"]
+selected_organ = st.selectbox("Select Organ", organs)
+
 total_count = st.number_input("Total Count")
 time_point_hours = st.number_input("Time Point in Hours")
 time_per_projection = st.number_input("Time per Projection (seconds)")
@@ -22,8 +26,9 @@ if st.button("Calculate Dose"):
     # Display the result
     st.write(f"Dose (Gy) = {dose:.2f} Gy")
 
-# Optionally, provide some instructions to the user
-st.markdown("Enter the cell parameters above, then click 'Calculate Dose' to get the result.")
+# Reference text
+st.markdown("Reference: Insert your reference text here.")
+
 
 
 
