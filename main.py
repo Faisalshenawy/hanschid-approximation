@@ -2,7 +2,7 @@ import streamlit as st
 
 # Title and Image
 st.title("Dose Calculation Web App")
-st.image("your_image.png", use_column_width=True)
+st.image("equation1.png", use_column_width=True)
 
 # Create input fields for cell parameters
 st.write("Enter the following cell parameters:")
