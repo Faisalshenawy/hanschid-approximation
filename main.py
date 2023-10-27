@@ -22,11 +22,8 @@ calibration_factor = st.number_input("Calibration Factor")
 if st.button("Calculate Dose"):
     # Perform the calculation based on the entered values
     dose = 0.25 * (total_count * time_point_hours) / (time_per_projection * num_images * volume * calibration_factor)
-
- # Display the absorbed dose with the selected organ
-    st.write(f"Selected Organ: {selected_organ}")
-    st.write(f"Absorbed Dose (Gy) = {dose:.2f} Gy")
-
+    # Display the absorbed dose for the selected organ
+    st.write(f"Absorbed Dose for {selected_organ} (Gy) = {dose:.2f} Gy")
 
 
 
